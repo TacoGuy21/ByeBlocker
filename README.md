@@ -9,7 +9,7 @@ https://discord.gg/BMxe6D9CKv
 
 ## How to use without bookmarklets
 
-1. Go [Codepen](https://codepen.io)
+1. Go to [Codepen](https://codepen.io)
 
 2. Create a pen
 
