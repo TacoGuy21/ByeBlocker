@@ -1,4 +1,4 @@
-# ByeSecurly
+# ByeBlocker
 
 Name inspired by Zek-c
 
