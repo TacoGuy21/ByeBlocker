@@ -1,0 +1,220 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+      }
+    
+      #background {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background: radial-gradient(circle, rgb(0, 0, 0), rgb(1, 44, 42));
+      }
+    
+      .star {
+        position: absolute;
+        background: rgb(57, 255, 215);
+        border-radius: 50%;
+        transform: scale(0);
+        animation: sparkle 2s infinite, drift linear infinite;
+      }
+    
+      @keyframes sparkle {
+        0%, 100% {
+          opacity: 0;
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    
+      @keyframes drift {
+        0%, 100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(50px, -50px);
+        }
+      }
+    </style>
+    </head>
+    <body>
+        <div class="image-container">
+            <a href="https://github.com/Tacogamerman/MonkeyGamerzz-Games">
+              <img src="sourcecode-KhotcharakSiriwong-Alamy.jpg" alt="Image 1" class="image">
+            </a>
+            
+            <a href="RetroHaunt.html">
+              <img src="23597358_0.webp" alt="Image 2" class="image">
+            </a>
+            
+            <a href="konekt.html">
+              <img src="images (1).png" alt="Image 3" class="image">
+            </a>
+            
+            <a href="chroma.html">
+              <img src="__big.jpg" alt="Image 4" class="image">
+            </a>
+            
+            <a href="eaglercraft.html">
+              <img src="465989e6d57afb5884010cdd7be639c8053b7320.webp" alt="Image 5" class="image">
+            </a>
+            
+            <a href="square.html">
+              <img src="blackhole.jpg" alt="Image 6" class="image">
+            </a>
+          </div>
+      <div id="background">
+        <!-- Generating stars -->
+        <script>
+          const numStars = 300;
+          const background = document.getElementById('background');
+    
+          for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.width = `${Math.random() * 3}px`;
+            star.style.height = star.style.width;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.top = `${Math.random() * 100}vh`;
+    
+            background.appendChild(star);
+          }
+        </script>
+      </div>
+    </body>
+        <style>
+          body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+          }
+          input {
+            margin-bottom: 10px;
+          }
+        </style>
+      <style>
+        .image-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+    
+        .image {
+          width: 250px;
+          height: 250px;
+          border: 2px solid #daf3f1;
+          margin: 40px;
+          padding: 10px;
+          box-sizing: border-box;
+          transition: all 0.3s ease;
+        }
+    
+        .image:hover {
+          transform: scale(1.1);
+          border-color: #9900ff;
+        }
+      </style>
+    </head>
+    <script>
+        javascript:(function() {
+  var menu = document.createElement('div');
+  var menuContent = document.createElement('div');
+  var closeButton = document.createElement('span');
+  var button = document.createElement('button');
+
+  menu.style.cssText = `
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: rgba(0, 255, 255, 0.2); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: 200px;
+  `;
+
+  menuContent.style.padding = '10px';
+
+  closeButton.style.cssText = `
+    float: right;
+    cursor: pointer;
+    color: #333;
+  `;
+  closeButton.innerHTML = '&times;';
+  closeButton.onclick = function() {
+    menu.remove();
+  };
+
+  button.innerHTML = 'Launch ByeBlocker';
+  button.style.cssText = `
+    font-family: Arial;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  `;
+  button.onclick = function() {
+    var link = prompt("Url?");
+    var proxy = 'https://api.codetabs.com/v1/proxy?quest=';
+    fetch(proxy + link)
+      .then((response) => response.text())
+      .then((text) => document.write(text));
+    var all = document.getElementsByTagName("*");
+    for (var i = 0, max = all.length; i < max; i++) {
+      if (all[i].src) {
+        all[i].src = new URL(all[i].src, link).href;
+        all[i].src = proxy + all[i].src;
+      }
+    }
+    window.onbeforeunload = function(e) {
+      e.preventDefault();
+      alert(e.toString());
+    };
+    function locationHashChanged(e) {
+      e.preventDefault();
+      alert(e);
+      window.location = new URL(e.oldURL, e.newURL).href;
+    }
+    window.onhashchange = locationHashChanged;
+  };
+
+  menuContent.appendChild(button);
+  menuContent.appendChild(closeButton);
+  menu.appendChild(menuContent);
+  document.body.appendChild(menu);
+
+  var isDragging = false;
+  var mouseOffset = { x: 0, y: 0 };
+
+  menuContent.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    mouseOffset.x = e.pageX - menu.offsetLeft;
+    mouseOffset.y = e.pageY - menu.offsetTop;
+  });
+
+  document.addEventListener('mousemove', function(e) {
+    if (isDragging) {
+      menu.style.left = (e.pageX - mouseOffset.x) + 'px';
+      menu.style.top = (e.pageY - mouseOffset.y) + 'px';
+    }
+  });
+
+  document.addEventListener('mouseup', function() {
+    isDragging = false;
+  });
+})();
+    </script>
