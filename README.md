@@ -15,6 +15,6 @@ https://discord.gg/BMxe6D9CKv
 
 2. Deploy
 
-3. Use link
+3. Annoy school admins
 
 <img width="677" alt="image" src="https://github.com/Tacogamerman/ByeBlocker/assets/119009502/aebfcb59-4fc1-4d8b-bb19-527d16176458">
