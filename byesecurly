@@ -27,7 +27,7 @@ javascript:(function() {
     menu.remove();
   };
 
-  button.innerHTML = 'Launch ByeSecurly';
+  button.innerHTML = 'Launch ByeBlocker';
   button.style.cssText = `
     font-family: Arial;
     font-size: 16px;
