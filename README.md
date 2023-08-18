@@ -2,17 +2,17 @@
 
 Name inspired by Zek-c
 
-This runs as a bookmarklet.
+This can run as a bookmarklet.
 
 My discord: 
 https://discord.gg/BMxe6D9CKv
 
 ## How to use without bookmarklets
 
-1. Go to [Codepen](https://codepen.io)
+1. Go to Netlify/Codepen/Render/Other 
 
-2. Create a pen
+2. Deploy
 
-3. Paste the code in the javascript section
+3. Use link
 
 <img width="677" alt="image" src="https://github.com/Tacogamerman/ByeBlocker/assets/119009502/aebfcb59-4fc1-4d8b-bb19-527d16176458">
