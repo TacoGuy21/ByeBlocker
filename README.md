@@ -6,8 +6,9 @@ Name inspired by Zek-c
 
 This can run as a bookmarklet.
 
-My discord: 
-https://discord.gg/BMxe6D9CKv
+[The Subreddit](https://www.reddit.com/r/swordstuff/)
+
+[Discord Server](https://discord.gg/BMxe6D9CKv)
 
 ## How to use without bookmarklets
 
